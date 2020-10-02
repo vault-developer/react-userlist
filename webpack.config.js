@@ -14,7 +14,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/',
+    publicPath: '/react-userlist',
     filename: isProd ? '[name].[contenthash:5].js' : '[name].js',
   },
   devServer: {
