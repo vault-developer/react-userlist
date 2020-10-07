@@ -2,7 +2,12 @@
 
 Simple react/redux app using material-ui, axios, custom webpack config.
 
-Quick Overview: <br>
+![preview](https://res.cloudinary.com/di8meiwx0/image/upload/v1602038300/userlist-example_vwnhvf.gif)
+
+#####Demo:
+https://vault-developer.github.io/react-userlist/
+
+#####Launch project:
 ```
 git clone https://github.com/vault-developer/react-userlist.git
 cd react-userlist
