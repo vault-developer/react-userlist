@@ -8,7 +8,7 @@
     "start": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "lint": "eslint src",
-    "predeploy": "yarn build",
+    "predeploy": "cross-env GP_DEPLOY=true yarn build",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],

@@ -9,12 +9,13 @@ const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
+const isDeploy = process.env.GP_DEPLOY === 'true';
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: isProd ? '/react-userlist' : '/',
+    publicPath: isDeploy ? '/react-userlist' : '/',
     filename: isProd ? '[name].[contenthash:5].js' : '[name].js',
   },
   devServer: {
