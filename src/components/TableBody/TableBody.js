@@ -2,8 +2,8 @@ import React from 'react';
 
 import MatTableBody from '@material-ui/core/TableBody';
 
-import { TableRow } from '#components/TableRow';
-import { TableTotal } from '#components/TableTotal';
+import { TableRow } from 'src/components/TableRow';
+import { TableTotal } from 'src/components/TableTotal';
 
 import { useTableBody } from './TableBody.hooks';
 

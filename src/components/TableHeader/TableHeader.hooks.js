@@ -1,6 +1,6 @@
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 
-import { toggleAllSelection } from '#redux/modules/users/actions';
+import { toggleAllSelection } from 'src/redux/modules/users/actions';
 
 export const useTableHeader = () => {
   const dispatch = useDispatch();

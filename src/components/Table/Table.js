@@ -7,9 +7,9 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import TableContainer from '@material-ui/core/TableContainer';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-import { TableBody } from '#components/TableBody';
-import { TableHeader } from '#components/TableHeader';
-import { TablePagination } from '#components/TablePagination';
+import { TableBody } from 'src/components/TableBody';
+import { TableHeader } from 'src/components/TableHeader';
+import { TablePagination } from 'src/components/TablePagination';
 
 import css from './Table.less';
 import { theme } from './Table.theme';

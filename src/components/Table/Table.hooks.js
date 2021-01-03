@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { get } from '#helpers/axios';
-import { setData } from '#redux/modules/users/actions';
+import { get } from 'src/helpers/axios';
+import { setData } from 'src/redux/modules/users/actions';
 
 export const useTable = () => {
   const dispatch = useDispatch();

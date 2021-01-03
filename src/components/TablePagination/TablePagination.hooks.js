@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setPage, setPageSize } from '#redux/modules/users/actions';
+import { setPage, setPageSize } from 'src/redux/modules/users/actions';
 
 export const useTableFooter = () => {
   const dispatch = useDispatch();

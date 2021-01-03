@@ -1,7 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { merge } = require('webpack-merge');
 
 const base = require('./webpack.base.js');
@@ -10,7 +10,6 @@ const isDeploy = process.env.GP_DEPLOY === 'true';
 
 const config = {
   mode: 'production',
-  devtool: undefined,
   output: {
     filename: '[name].[contenthash:5].js',
     publicPath: isDeploy ? '/react-userlist' : '/',
@@ -33,7 +32,7 @@ const config = {
   optimization: {
     minimizer: [
       new TerserPlugin(),
-      new OptimizeCSSAssetsPlugin({})
+      new CssMinimizerPlugin()
     ]
   },
   plugins: [

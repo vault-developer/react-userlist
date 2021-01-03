@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { toggleRowSelection } from '#redux/modules/users/actions';
+import { toggleRowSelection } from 'src/redux/modules/users/actions';
 
 export const useTableBody = ({ id }) => {
   const dispatch = useDispatch();

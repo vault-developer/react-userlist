@@ -5,8 +5,20 @@ const CopyPlugin = require('copy-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, './dist')
+  },
   module: {
     rules: [
+      //https://github.com/webpack/webpack/issues/11467
+      {
+        test: /\.m?js$/,
+        resolve: {
+          fullySpecified: false
+        },
+        include: /node_modules/,
+      },
       {
         test: /\.(less|css)$/,
         use: [
@@ -60,9 +72,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '#helpers': path.resolve(__dirname, 'src/helpers/'),
-      '#redux': path.resolve(__dirname, 'src/redux/'),
-      '#components': path.resolve(__dirname, 'src/components/'),
+      'src': path.resolve(__dirname, 'src')
     }
   }
 };

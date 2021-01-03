@@ -24,7 +24,7 @@ export const TablePagination = () => {
       rowsPerPageOptions={[5, 7, 10]}
       labelRowsPerPage="показывать по:"
       onChangeRowsPerPage={handleChangeRowsPerPage}
-      labelDisplayedRows={props => `${props.from}-${props.to} из ${props.count}`}
+      labelDisplayedRows={({ from, to, count }) => `${from}-${to} из ${count}`}
     />
   );
 };
