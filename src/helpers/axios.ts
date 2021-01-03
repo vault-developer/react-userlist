@@ -9,7 +9,7 @@ export const get = ({
   onSuccess,
   onFailure,
   onFinish
-}) => {
+}:any) => {
   onStart?.();
   axios
     .get(location)

@@ -1,7 +1,7 @@
 import React from 'react';
 import MatTablePagination from '@material-ui/core/TablePagination';
 
-import { useTableFooter } from './TablePagination.hooks';
+import { useTableFooter } from 'src/components/TablePagination/TablePagination.hooks';
 
 export const TablePagination = () => {
   const {

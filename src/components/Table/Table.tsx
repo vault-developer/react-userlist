@@ -6,12 +6,11 @@ import MatTable from '@material-ui/core/Table';
 import TableContainer from '@material-ui/core/TableContainer';
 import Typography from '@material-ui/core/Typography';
 
+import { useTable } from 'src/components/Table/Table.hooks';
+import { theme } from 'src/components/Table/Table.theme';
 import { TableBody } from 'src/components/TableBody';
 import { TableHeader } from 'src/components/TableHeader';
 import { TablePagination } from 'src/components/TablePagination';
-
-import { useTable } from './Table.hooks';
-import { theme } from './Table.theme';
 
 import css from './Table.less';
 

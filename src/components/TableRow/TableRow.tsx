@@ -4,7 +4,7 @@ import TableCell from '@material-ui/core/TableCell';
 import MatTableRow from '@material-ui/core/TableRow';
 import PropTypes from 'prop-types';
 
-import { useTableBody } from './TableRow.hooks';
+import { useTableBody } from 'src/components/TableRow/TableRow.hooks';
 
 // memo used for optimize rerenders after pageSize changing
 export const TableRow = memo<any>(({ id }) => {
