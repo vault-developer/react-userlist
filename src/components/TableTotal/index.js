@@ -1,1 +1,1 @@
-export { TableTotal } from './TableTotal';
+export { TableTotal } from 'src/components/TableTotal/TableTotal';

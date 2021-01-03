@@ -3,4 +3,4 @@ import { devToolsEnhancer } from 'redux-devtools-extension/developmentOnly';
 
 import { reducer } from './reducer';
 
-export const store = createStore(reducer, {}, devToolsEnhancer());
+export const store = createStore(reducer, {}, devToolsEnhancer(undefined));

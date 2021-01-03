@@ -21,13 +21,9 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "map": [
-          [
-            "src", "./src"
-          ]
-        ],
+        "map": [["src", "./src"]],
         "extensions": [
-          ".js"
+          ".js", ".ts", ".tsx"
         ]
       }
     }

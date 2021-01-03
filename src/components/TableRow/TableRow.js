@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { useTableBody } from './TableRow.hooks';
 
 // memo used for optimize rerenders after pageSize changing
-export const TableRow = memo(({ id }) => {
+export const TableRow = memo<any>(({ id }) => {
   const {
     age,
     lastName,
@@ -30,7 +30,7 @@ export const TableRow = memo(({ id }) => {
       <TableCell align="center">{age}</TableCell>
     </MatTableRow>
   );
-});
+}) as any;
 
 TableRow.propTypes = {
   id: PropTypes.string.isRequired
