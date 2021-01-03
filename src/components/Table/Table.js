@@ -1,19 +1,19 @@
 import React from 'react';
-
-import Paper from '@material-ui/core/Paper';
-import MatTable from '@material-ui/core/Table';
-import Typography from '@material-ui/core/Typography';
-import { ThemeProvider } from '@material-ui/core/styles';
-import TableContainer from '@material-ui/core/TableContainer';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Paper from '@material-ui/core/Paper';
+import { ThemeProvider } from '@material-ui/core/styles';
+import MatTable from '@material-ui/core/Table';
+import TableContainer from '@material-ui/core/TableContainer';
+import Typography from '@material-ui/core/Typography';
 
 import { TableBody } from 'src/components/TableBody';
 import { TableHeader } from 'src/components/TableHeader';
 import { TablePagination } from 'src/components/TablePagination';
 
-import css from './Table.less';
-import { theme } from './Table.theme';
 import { useTable } from './Table.hooks';
+import { theme } from './Table.theme';
+
+import css from './Table.less';
 
 export const Table = () => {
   const loading = useTable();

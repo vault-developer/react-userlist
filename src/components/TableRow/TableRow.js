@@ -1,9 +1,8 @@
 import React, { memo } from 'react';
-import PropTypes from 'prop-types';
-
 import Checkbox from '@material-ui/core/Checkbox';
-import MatTableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
+import MatTableRow from '@material-ui/core/TableRow';
+import PropTypes from 'prop-types';
 
 import { useTableBody } from './TableRow.hooks';
 

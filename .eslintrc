@@ -15,15 +15,20 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "simple-import-sort"
   ],
   "settings": {
     "import/resolver": {
       "alias": {
         "map": [
-          ["src", "./src"]
+          [
+            "src", "./src"
+          ]
         ],
-        "extensions": [".js"]
+        "extensions": [
+          ".js"
+        ]
       }
     }
   },
@@ -33,6 +38,22 @@
     "import/prefer-default-export": 0,
     "arrow-parens": 0,
     "no-trailing-spaces": 0,
-    "no-shadow": 0
+    "no-shadow": 0,
+    "simple-import-sort/imports": ["error",
+      {
+        "groups": [
+          // Packages. `react` related packages come first.
+          ["^react", "^@?\\w"],
+          // Internal packages.
+          ["^src"],
+          // Hooks imports.
+          ["^use[A-Z]"],
+          // Relative imports
+          ["^\\."],
+          // Style imports.
+          ["^.*\\.less$"]
+        ]
+      }
+    ]
   }
 }

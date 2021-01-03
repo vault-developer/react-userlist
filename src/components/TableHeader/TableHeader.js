@@ -1,9 +1,8 @@
 import React from 'react';
-
 import Checkbox from '@material-ui/core/Checkbox';
-import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
 
 import { useTableHeader } from 'src/components/TableHeader/TableHeader.hooks';
 

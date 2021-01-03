@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
-
-import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
 
 import { useTableTotal } from './TableTotal.hooks';
 
