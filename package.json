@@ -5,8 +5,9 @@
   "main": "index.js",
   "homepage": "https://vault-developer.github.io/react-userlist/",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "webpack-dev-server --config ./webpack.dev.js",
+    "start:prod": "serve dist",
+    "build": "webpack --config ./webpack.prod.js",
     "lint": "eslint src",
     "predeploy": "cross-env GP_DEPLOY=true yarn build",
     "deploy": "gh-pages -d dist"
@@ -58,6 +59,7 @@
     "terser-webpack-plugin": "^4.2.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.7.3"
   }
 }
