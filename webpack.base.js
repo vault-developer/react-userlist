@@ -5,6 +5,8 @@ const CopyPlugin = require('copy-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
+  //https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/281
+  target: 'web',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist')
