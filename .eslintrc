@@ -4,30 +4,33 @@
     "es2021": true
   },
   "extends": [
+    // AirBnb
+    "airbnb",
+    // Базовые правила react
     "plugin:react/recommended",
-    "airbnb"
+    // Базовые правила react hooks
+    "plugin:react-hooks/recommended",
+    // Базовые правила для TypeScript
+    "plugin:@typescript-eslint/recommended",
+    // Правила TS, требующие инфо о типах
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
+  // Движок парсинга
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    "project": "tsconfig.json"
   },
   "plugins": [
+    "@typescript-eslint",
     "react",
     "simple-import-sort"
   ],
   "settings": {
     "import/resolver": {
       "alias": {
-        "map": [
-          [
-            "src", "./src"
-          ]
-        ],
+        "map": [["src", "./src"]],
         "extensions": [
-          ".js"
+          ".js", ".ts", ".tsx"
         ]
       }
     }
@@ -35,9 +38,14 @@
   "rules": {
     "react/jsx-filename-extension": 0,
     "comma-dangle": 0,
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": 1,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
     "import/prefer-default-export": 0,
     "arrow-parens": 0,
     "no-trailing-spaces": 0,
+    "import/extensions": 0,
+    "object-curly-spacing": 0,
     "no-shadow": 0,
     "simple-import-sort/imports": ["error",
       {

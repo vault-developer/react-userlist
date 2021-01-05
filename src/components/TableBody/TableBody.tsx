@@ -1,13 +1,12 @@
 import React from 'react';
 import MatTableBody from '@material-ui/core/TableBody';
 
-import { TableRow } from 'src/components/TableRow';
-import { TableTotal } from 'src/components/TableTotal';
-
-import { useTableBody } from './TableBody.hooks';
+import {useTableBody} from 'src/components/TableBody/TableBody.hooks';
+import {TableRow} from 'src/components/TableRow';
+import {TableTotal} from 'src/components/TableTotal';
 
 export const TableBody = () => {
-  const { slicedIds } = useTableBody();
+  const {slicedIds} = useTableBody();
 
   return (
     <MatTableBody>

@@ -1,13 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
   //https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/281
   target: 'web',
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, './dist')
   },
@@ -73,8 +74,7 @@ module.exports = {
     })
   ],
   resolve: {
-    alias: {
-      'src': path.resolve(__dirname, 'src')
-    }
+    extensions: ['.js', '.tsx', '.ts', '.less'],
+    plugins: [new TsconfigPathsPlugin()]
   }
 };

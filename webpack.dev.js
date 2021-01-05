@@ -22,14 +22,19 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            plugins: [require.resolve('react-refresh/babel')]
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              plugins: [require.resolve('react-refresh/babel')]
+            }
+          },
+          {
+            loader: 'ts-loader'
           }
-        },
+        ],
       },
       {
         test: /\.(less|css)$/,

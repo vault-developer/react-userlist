@@ -1,1 +1,0 @@
-export { TableTotal } from './TableTotal';
