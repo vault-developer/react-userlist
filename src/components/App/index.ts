@@ -1,1 +1,1 @@
-export { App } from 'src/components/App/App';
+export {App} from 'src/components/App/App';

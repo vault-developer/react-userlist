@@ -1,16 +1,18 @@
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react'
+import {useDispatch, useSelector} from 'react-redux';
 
-import { setPage, setPageSize } from 'src/redux/modules/users/actions';
+import {setPage, setPageSize} from 'src/redux/modules/users/actions';
+import {IState} from "../../redux/store";
 
 export const useTableFooter = () => {
   const dispatch = useDispatch();
 
-  const length = useSelector(({ users }) => users.allIds.length);
-  const page = useSelector(({ users }) => users.page);
-  const size = useSelector(({ users }) => users.pageSize);
+  const length = useSelector((state: IState) => state.users.allIds.length);
+  const page = useSelector((state: IState) => state.users.page);
+  const size = useSelector((state: IState) => state.users.pageSize);
 
-  const handleChangePage = (e, page) => dispatch(setPage(page));
-  const handleChangeRowsPerPage = e => dispatch(setPageSize(e.target.value));
+  const handleChangePage = (e: React.MouseEvent<HTMLButtonElement>, page: number) => dispatch(setPage(page));
+  const handleChangeRowsPerPage = (e: React.ChangeEvent<HTMLInputElement>) => dispatch(setPageSize(Number(e.target.value)));
 
   return {
     size,

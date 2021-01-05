@@ -1,7 +1,7 @@
 import React from 'react';
 import MatTablePagination from '@material-ui/core/TablePagination';
 
-import { useTableFooter } from 'src/components/TablePagination/TablePagination.hooks';
+import {useTableFooter} from 'src/components/TablePagination/TablePagination.hooks';
 
 export const TablePagination = () => {
   const {
@@ -23,7 +23,7 @@ export const TablePagination = () => {
       rowsPerPageOptions={[5, 7, 10]}
       labelRowsPerPage="показывать по:"
       onChangeRowsPerPage={handleChangeRowsPerPage}
-      labelDisplayedRows={({ from, to, count }) => `${from}-${to} из ${count}`}
+      labelDisplayedRows={({from, to, count}) => `${from}-${to} из ${count}`}
     />
   );
 };

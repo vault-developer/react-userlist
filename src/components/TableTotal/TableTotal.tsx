@@ -1,8 +1,8 @@
-import React, { memo } from 'react';
+import React, {memo} from 'react';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 
-import { useTableTotal } from './TableTotal.hooks';
+import {useTableTotal} from './TableTotal.hooks';
 
 // memo used for optimize rerenders after pageSize, page changing
 export const TableTotal = memo(() => {

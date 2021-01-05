@@ -1,13 +1,13 @@
-import React, { memo } from 'react';
+import React, {memo} from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
 import TableCell from '@material-ui/core/TableCell';
 import MatTableRow from '@material-ui/core/TableRow';
 import PropTypes from 'prop-types';
 
-import { useTableBody } from 'src/components/TableRow/TableRow.hooks';
+import {useTableBody} from 'src/components/TableRow/TableRow.hooks';
 
 // memo used for optimize rerenders after pageSize changing
-export const TableRow = memo<any>(({ id }) => {
+export const TableRow:React.FC<{id:string}> = memo(({id}: { id: string }) => {
   const {
     age,
     lastName,
@@ -15,7 +15,7 @@ export const TableRow = memo<any>(({ id }) => {
     isSelected,
 
     handleSelect
-  } = useTableBody({ id });
+  } = useTableBody({id});
 
   return (
     <MatTableRow>
@@ -30,7 +30,7 @@ export const TableRow = memo<any>(({ id }) => {
       <TableCell align="center">{age}</TableCell>
     </MatTableRow>
   );
-}) as any;
+});
 
 TableRow.propTypes = {
   id: PropTypes.string.isRequired
