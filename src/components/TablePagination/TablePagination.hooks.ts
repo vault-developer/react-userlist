@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {setPage, setPageSize} from 'src/redux/modules/users/actions';
-import {IState} from "../../redux/store";
+import {IState} from 'src/redux/store';
 
 export const useTableFooter = () => {
   const dispatch = useDispatch();
@@ -11,8 +11,13 @@ export const useTableFooter = () => {
   const page = useSelector((state: IState) => state.users.page);
   const size = useSelector((state: IState) => state.users.pageSize);
 
-  const handleChangePage = (e: React.MouseEvent<HTMLButtonElement, MouseEvent> | null, page: number) => dispatch(setPage(page));
-  const handleChangeRowsPerPage = (e: React.ChangeEvent<HTMLInputElement>) => dispatch(setPageSize(Number(e.target.value)));
+  const handleChangePage = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent> | null,
+    page: number
+  ) => dispatch(setPage(page));
+  const handleChangeRowsPerPage = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => dispatch(setPageSize(Number(e.target.value)));
 
   return {
     size,

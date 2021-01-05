@@ -1,9 +1,9 @@
 import {useEffect, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
+import {IUserDTO} from 'src/dto.types';
 import {get} from 'src/helpers/axios';
 import {setData} from 'src/redux/modules/users/actions';
-import {IUserDTO} from "../../dto.types";
 
 export const useTable = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export const useTable = () => {
       onFailure: err => console.log(err),
       onFinish: () => setLoading(false)
     });
-  }, []);
+  }, [dispatch]);
 
   return loading;
 };

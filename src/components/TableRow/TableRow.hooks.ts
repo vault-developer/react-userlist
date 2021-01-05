@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from 'react-redux';
 
 import {toggleRowSelection} from 'src/redux/modules/users/actions';
-import {IState} from "../../redux/store";
+import {IState} from 'src/redux/store';
 
 export const useTableBody = ({id}: { id: string }) => {
   const dispatch = useDispatch();

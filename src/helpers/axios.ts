@@ -17,7 +17,7 @@ export function get<T>({
   onSuccess,
   onFailure,
   onFinish
-}:AxiosGetProps<T>){
+}:AxiosGetProps<T>) {
   onStart?.();
   axios
     .get(location)

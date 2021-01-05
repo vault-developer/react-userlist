@@ -10,8 +10,8 @@ export const TableBody = () => {
 
   return (
     <MatTableBody>
-      {slicedIds.map(el => <TableRow id={el} key={el}/>)}
-      <TableTotal/>
+      {slicedIds.map(el => <TableRow id={el} key={el} />)}
+      <TableTotal />
     </MatTableBody>
   );
 };

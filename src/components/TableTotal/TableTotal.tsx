@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React, {memo} from 'react';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';

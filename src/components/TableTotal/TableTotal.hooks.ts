@@ -1,6 +1,7 @@
 import {useMemo} from 'react';
 import {useSelector} from 'react-redux';
-import {IState} from "../../redux/store";
+
+import {IState} from 'src/redux/store';
 
 export const useTableTotal = () => {
   const selected = useSelector((state: IState) => state.users.selectedIds);

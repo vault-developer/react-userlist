@@ -1,17 +1,17 @@
-import {IUser} from './state.types';
 import {
-  types,
   ISetDataAction,
   ISetPageAction,
   ISetPageSizeAction,
   IToggleAllSelectionAction,
-  IToggleRowSelectionAction
-} from "./actions.types";
+  IToggleRowSelectionAction,
+  types
+} from './actions.types';
+import {IUser} from './state.types';
 
 export const setPage = (page: number): ISetPageAction => ({
   type: types.SET_PAGE,
   data: page
-})
+});
 
 export const setPageSize = (size: number): ISetPageSizeAction => ({
   type: types.SET_PAGE_SIZE,

@@ -1,7 +1,7 @@
 import {shallowEqual, useDispatch, useSelector} from 'react-redux';
 
 import {toggleAllSelection} from 'src/redux/modules/users/actions';
-import {IState} from "../../redux/store";
+import {IState} from 'src/redux/store';
 
 export const useTableHeader = () => {
   const dispatch = useDispatch();

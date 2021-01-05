@@ -1,12 +1,12 @@
-import {IUsersById, IUsersState} from './state.types';
 import {
-  types,
   ISetDataAction,
   ISetPageAction,
   ISetPageSizeAction,
   IToggleRowSelectionAction,
-  IUsersAction
-} from "./actions.types";
+  IUsersAction,
+  types
+} from './actions.types';
+import {IUsersById, IUsersState} from './state.types';
 
 const initial: IUsersState = {
   byId: {},
@@ -22,7 +22,7 @@ export const reducer = (state = initial, action: IUsersAction): IUsersState => {
   switch (type) {
     case types.SET_DATA: {
       // уточнение типа
-      const {data} = action as ISetDataAction
+      const {data} = action as ISetDataAction;
       return {
         ...state,
         allIds: data.map(el => el.id),
@@ -34,17 +34,17 @@ export const reducer = (state = initial, action: IUsersAction): IUsersState => {
       };
     }
     case types.SET_PAGE: {
-      const {data} = action as ISetPageAction
+      const {data} = action as ISetPageAction;
       return {...state, page: data};
     }
 
     case types.SET_PAGE_SIZE: {
-      const {data} = action as ISetPageSizeAction
+      const {data} = action as ISetPageSizeAction;
       return {...state, pageSize: data};
     }
 
     case types.TOGGLE_ROW_SELECTION: {
-      const {data} = action as IToggleRowSelectionAction
+      const {data} = action as IToggleRowSelectionAction;
       if (!state.selectedIds.includes(data)) {
         const selectedIds = [...state.selectedIds];
         selectedIds.push(data);

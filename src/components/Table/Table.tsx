@@ -17,7 +17,7 @@ import css from './Table.less';
 export const Table = () => {
   const loading = useTable();
 
-  if (loading) return <CircularProgress/>;
+  if (loading) return <CircularProgress />;
 
   return (
     <ThemeProvider theme={theme}>
@@ -33,10 +33,10 @@ export const Table = () => {
         className={css['table-container']}
       >
         <MatTable>
-          <TableHeader/>
-          <TableBody/>
+          <TableHeader />
+          <TableBody />
         </MatTable>
-        <TablePagination/>
+        <TablePagination />
       </TableContainer>
     </ThemeProvider>
   );
