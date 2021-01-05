@@ -11,7 +11,7 @@ export const useTableFooter = () => {
   const page = useSelector((state: IState) => state.users.page);
   const size = useSelector((state: IState) => state.users.pageSize);
 
-  const handleChangePage = (e: React.MouseEvent<HTMLButtonElement>, page: number) => dispatch(setPage(page));
+  const handleChangePage = (e: React.MouseEvent<HTMLButtonElement, MouseEvent> | null, page: number) => dispatch(setPage(page));
   const handleChangeRowsPerPage = (e: React.ChangeEvent<HTMLInputElement>) => dispatch(setPageSize(Number(e.target.value)));
 
   return {
