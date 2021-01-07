@@ -3,5 +3,15 @@
     "@babel/preset-react",
     "@babel/preset-env",
     "@babel/preset-typescript"
-  ]
+  ],
+  "ignore": [
+    "**/*.test.{ts,tsx}"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        ["@babel/plugin-transform-runtime", {"regenerator": true}]
+      ]
+    }
+  }
 }
