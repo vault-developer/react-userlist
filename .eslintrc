@@ -28,7 +28,7 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "map": [["src", "./src"]],
+        "map": [["src", "./src"], ["test", "./test"]],
         "extensions": [
           ".js", ".ts", ".tsx"
         ]
@@ -41,6 +41,7 @@
     "no-use-before-define": 0,
     "@typescript-eslint/no-use-before-define": 1,
     "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/ban-ts-comment": "warn",
     "import/prefer-default-export": 0,
     "arrow-parens": 0,
     "no-trailing-spaces": 0,
