@@ -17,7 +17,7 @@
     "deploy": "gh-pages -d dist"
   },
   "author": "Albert Trott",
-  "license": "ISC",
+  "license": "MIT",
   "engines": {
     "node": ">= 12.13.0"
   },
