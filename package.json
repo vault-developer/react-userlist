@@ -7,7 +7,7 @@
     "start": "webpack serve --config webpack.dev.js",
     "start:prod": "serve dist",
     "build": "webpack --config webpack.prod.js",
-    "lint:ts": "eslint src",
+    "lint:ts": "eslint src && eslint test",
     "lint:less": "stylelint src",
     "lint": "yarn lint:ts && yarn lint:less",
     "test": "jest",
