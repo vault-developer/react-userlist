@@ -1,5 +1,4 @@
-// Types from API endpoints
-
+// API data transfer objects
 export interface IUserDTO {
   firstName: string
   lastName: string
