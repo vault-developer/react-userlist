@@ -19,10 +19,10 @@ export const TablePagination = () => {
       count={length}
       component="div"
       rowsPerPage={size}
-      onChangePage={handleChangePage}
+      onPageChange={handleChangePage}
       rowsPerPageOptions={[5, 7, 10]}
       labelRowsPerPage="Show per page:"
-      onChangeRowsPerPage={handleChangeRowsPerPage}
+      onRowsPerPageChange={handleChangeRowsPerPage}
     />
   );
 };
