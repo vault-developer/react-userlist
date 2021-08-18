@@ -14,7 +14,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "predeploy": "cross-env GP_DEPLOY=true yarn build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "prepare": "husky install"
   },
   "author": "Albert Trott",
   "license": "MIT",
@@ -66,7 +67,7 @@
     "file-loader": "6.2.0",
     "gh-pages": "3.1.0",
     "html-webpack-plugin": "5.0.0-beta.1",
-    "husky": "4.3.6",
+    "husky": "7.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "less": "4.0.0",
@@ -87,11 +88,6 @@
     "webpack-cli": "4.3.1",
     "webpack-dev-server": "3.11.1",
     "webpack-merge": "5.7.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint"
-    }
   },
   "browserslist": [
     ">0.5%",
