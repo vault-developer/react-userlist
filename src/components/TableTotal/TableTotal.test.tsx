@@ -13,7 +13,7 @@ describe('components/TableTotal:', () => {
 
   test('render without error', () => {
     const {getByText} = render(component, getStore());
-    expect(getByText(/Пользователи/)).toBeTruthy();
+    expect(getByText(/Users/)).toBeTruthy();
   });
 
   test('render selected users', () => {
@@ -34,7 +34,7 @@ describe('components/TableTotal:', () => {
     store.dispatch(toggleRowSelection(users[1].id));
 
     const {getByText} = render(component, store);
-    const text = getByText(/Пользователи/).textContent || '';
+    const text = getByText(/Users/).textContent || '';
 
     expect(text.includes(users[0].firstName)).toBeTruthy();
     expect(text.includes(users[1].firstName)).toBeTruthy();

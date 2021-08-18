@@ -14,10 +14,10 @@ describe('components/Table:', () => {
 
     const {queryByText} = render(<Table />, getStore());
 
-    expect(queryByText(/Список сотрудников/)).toBeFalsy();
+    expect(queryByText(/User list/)).toBeFalsy();
 
     await waitFor(() => expect(axios.get).toHaveBeenCalledTimes(1));
 
-    expect(queryByText(/Список сотрудников/)).toBeTruthy();
+    expect(queryByText(/User list/)).toBeTruthy();
   });
 });

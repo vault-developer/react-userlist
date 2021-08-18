@@ -39,7 +39,7 @@ describe('components/TablePagination:', () => {
   test('render without error', () => {
     const store = setupStore();
     const {getByText} = render(<TablePagination />, store);
-    expect(getByText(/показывать по/)).toBeTruthy();
+    expect(getByText(/Show per page:/)).toBeTruthy();
   });
 
   test('should update redux store after page changing', () => {
@@ -56,7 +56,7 @@ describe('components/TablePagination:', () => {
     const store = setupStore();
     const {container} = render(<TablePagination />, store);
 
-    const pageSizeSelect = container.querySelector('div[role="button"]'); 
+    const pageSizeSelect = container.querySelector('div[role="button"]');
     if (!pageSizeSelect) throw new Error('pageSizeInput is not found');
 
     expect(store.getState().users.pageSize).toBe(5);
