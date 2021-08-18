@@ -18,9 +18,9 @@ export const TableHeader = () => {
             checked={isChecked}
           />
         </TableCell>
-        <TableCell>Имя</TableCell>
-        <TableCell align="center">Фамилия</TableCell>
-        <TableCell align="center">Возраст</TableCell>
+        <TableCell>FirstName</TableCell>
+        <TableCell align="center">LastName</TableCell>
+        <TableCell align="center">Age</TableCell>
       </TableRow>
     </TableHead>
   );

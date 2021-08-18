@@ -29,7 +29,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: '[folder]__[local]--[hash:base64:5]',
+                localIdentName: '[path][name]__[local]--[hash:base64:5]',
                 exportLocalsConvention: 'camelCase',
               },
               importLoaders: 2,

@@ -11,6 +11,7 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': 'babel-jest'
   },
+  testEnvironment: 'jsdom',
   coverageThreshold: {
     global: {
       branches: 70,
