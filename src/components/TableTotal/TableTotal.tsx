@@ -12,7 +12,7 @@ export const TableTotal = memo(() => {
   return (
     <TableRow>
       <TableCell colSpan={4}>
-        {`Пользователи: ${users.join(', ')}`}
+        {`Users: ${users.join(', ')}`}
       </TableCell>
     </TableRow>
   );

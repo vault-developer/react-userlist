@@ -26,7 +26,7 @@ export const Table = () => {
         align="center"
         style={{marginBottom: '1.5em'}}
       >
-        Список сотрудников
+        User list
       </Typography>
       <TableContainer
         component={Paper}
