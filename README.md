@@ -18,7 +18,7 @@ https://vault-developer.github.io/react-userlist/
 
 ##### Launch project:
 ```
-git clone https://github.com/vault-developer/react-userlist.git
+git clone git@github.com:vault-developer/react-userlist.git
 cd react-userlist
 yarn
 yarn start
