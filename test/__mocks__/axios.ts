@@ -15,6 +15,6 @@ module.exports = {
     });
   },
   CancelToken: {
-    source: () => ({token: 'RandomCancelToken'})
+    source: () => ({token: 'RandomCancelToken', cancel: jest.fn()})
   }
 };
