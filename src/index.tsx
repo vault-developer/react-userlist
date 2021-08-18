@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {App} from 'src/components/App';
+import {App} from 'src/containers/App';
 import {getStore} from 'src/redux/store';
 
 import 'normalize.css';

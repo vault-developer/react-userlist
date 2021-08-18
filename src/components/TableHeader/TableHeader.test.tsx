@@ -13,9 +13,9 @@ describe('components/TableHeader:', () => {
 
   test('render without error', () => {
     const {getByText} = render(component, getStore());
-    expect(getByText(/Имя/)).toBeTruthy();
-    expect(getByText(/Фамилия/)).toBeTruthy();
-    expect(getByText(/Возраст/)).toBeTruthy();
+    expect(getByText(/FirstName/)).toBeTruthy();
+    expect(getByText(/LastName/)).toBeTruthy();
+    expect(getByText(/Age/)).toBeTruthy();
   });
 
   test('click should update redux state', () => {
