@@ -13,5 +13,8 @@ module.exports = {
       post: jest.fn(defaultResolver),
       delete: jest.fn(defaultResolver),
     });
+  },
+  CancelToken: {
+    source: () => ({token: 'RandomCancelToken'})
   }
 };
