@@ -4,7 +4,7 @@ import TableCell from '@material-ui/core/TableCell';
 import MatTableRow from '@material-ui/core/TableRow';
 import PropTypes from 'prop-types';
 
-import {useTableBody} from 'src/components/TableRow/TableRow.hooks';
+import {useTableRow} from 'src/components/TableRow/TableRow.hooks';
 
 // memo used for optimize rerenders after pageSize changing
 export const TableRow:React.FC<{id:string}> = memo(({id}: { id: string }) => {
@@ -15,7 +15,7 @@ export const TableRow:React.FC<{id:string}> = memo(({id}: { id: string }) => {
     isSelected,
 
     handleSelect
-  } = useTableBody({id});
+  } = useTableRow({id});
 
   return (
     <MatTableRow>

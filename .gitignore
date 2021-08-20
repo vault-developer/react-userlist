@@ -5,3 +5,4 @@ node_modules
 coverage
 
 yarn-error.log
+/react-userlist.iml
